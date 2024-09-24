@@ -1,0 +1,23 @@
+{% extends 'master.html' %}
+
+{%  block content %}
+    <!-- templates/categories.html -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Product Categories</h1>
+        <div class="row">
+            <!-- Category 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{Categories.image.url}}" class="card-img-top" alt="{{ Categories.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ Categories.name }}</h5>
+                         
+                        <a href="{% url 'product' %}" class="btn btn-primary">Explore "{{ Categories.name }}"</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+             

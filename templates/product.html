@@ -1,0 +1,36 @@
+{% extends 'master.html' %}
+            
+ 
+{%  block content %}
+<div class="container text-center">
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.drz.lazcdn.com/g/kf/S03892153eb5e476b866eb5a73560cb60D.jpg_400x400q80.jpg_.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+        </div>
+         
+    <div class="container text-center">
+        <div class="row">
+            {% for Prod in Product %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                <img src="{{ prod.image.url }}" class="card-img-top" alt="{{prod.name}}">
+                <div class="card-body">
+
+                    <h5 class="card-title">{{prod.name}} ({{prod.price}})</h5>
+                    <p class="card-text">{{ prod.description }}</p>
+                    <a href="{% url 'productdetail' id=prod.id%}" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+             {% endfor %}
+             </div>
+             </div>
+             {%endblock%}
