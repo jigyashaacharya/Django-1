@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Product',
     'Categories',
     'Contact',
+    'admin_panel',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'eshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'DIRS': ["templates", "admin_panel/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

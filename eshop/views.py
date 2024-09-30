@@ -21,6 +21,9 @@ def Contact(request):
     return render(request,"contact.html")
     return HttpResponse(html)
 
+def dashboard(request):
+    return  render(request,"dashboard.html")
+
 
 
  

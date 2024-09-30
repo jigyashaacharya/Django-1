@@ -8,4 +8,5 @@ class Contact(models.Model):
     message = models.TextField()
  
     
-def  __str__(self):
+# def  __str__(self):
+

@@ -7,6 +7,10 @@ class Product(models.Model):
     description = models.TextField()
     categories  = models.ForeignKey(Categories,  on_delete=models.CASCADE)
     
+class Categories(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    
     
     
     def __str__(self)  -> str:
